@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: dep
-  name: dep
+    app: live-app-dep
+  name: live-app-dep
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: dep
+      app: live-app-dep
   strategy: {}
   template:
     metadata:
       labels:
-        app: dep
+        app: live-app-dep
     spec:
       containers:
       - image: public.ecr.aws/l6m2t8p7/docker-2048:latest

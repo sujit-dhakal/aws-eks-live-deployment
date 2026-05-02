@@ -2,15 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: dep
-  name: dep
+    app: live-app-dep
+  name: live-app-svc
 spec:
   ports:
-    - port: 8080
+    - port: 80
       protocol: TCP
       targetPort: 80
   selector:
-    app: dep
-  type: LoadBalancer
-status:
-  loadBalancer: {}
+    app: live-app-dep
+  type: ClusterIP

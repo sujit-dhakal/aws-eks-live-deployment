@@ -3,9 +3,9 @@ accessConfig:
 addonsConfig: {}
 apiVersion: eksctl.io/v1alpha5
 availabilityZones:
+  - ap-south-1b
   - ap-south-1a
   - ap-south-1c
-  - ap-south-1b
 cloudWatch:
   clusterLogging: {}
 iam:
@@ -36,11 +36,12 @@ managedNodeGroups:
         xRay: false
     instanceSelector: {}
     labels:
-      alpha.eksctl.io/cluster-name: live-dep
-      alpha.eksctl.io/nodegroup-name: ng-d3e345ed
+      alpha.eksctl.io/cluster-name: live-app
+      alpha.eksctl.io/nodegroup-name: ng-7b8da1c8
     maxSize: 2
     minSize: 2
-    name: ng-d3e345ed
+    name: ng-7b8da1c8
+    instanceType: t3.small
     privateNetworking: false
     releaseVersion: ""
     securityGroups:
@@ -50,14 +51,14 @@ managedNodeGroups:
       allow: false
       publicKeyPath: ""
     tags:
-      alpha.eksctl.io/nodegroup-name: ng-d3e345ed
+      alpha.eksctl.io/nodegroup-name: ng-7b8da1c8
       alpha.eksctl.io/nodegroup-type: managed
     volumeIOPS: 3000
     volumeSize: 80
     volumeThroughput: 125
     volumeType: gp3
 metadata:
-  name: live-dep
+  name: live-app
   region: ap-south-1
   version: "1.34"
 privateCluster:
